@@ -1,0 +1,54 @@
+/* TOPO */
+
+.top-logo{
+    width: 100px;
+    height: 100px;
+}
+
+.top-background{
+    background: rgb(92, 55, 214);
+}
+
+.background-footer{
+    background: rgb(92, 55, 214);
+    color: white;
+}
+
+.top-nav a{
+    color:  rgb(204, 189, 255);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14pt;
+}
+
+.top-nav a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/* FOOTER */
+
+.link-email{
+    color:  rgb(204, 189, 255);
+}
+
+.link-email:hover{
+    color: white;
+    text-decoration: none;
+}
+
+/* Loading (Spinner) */
+
+.loader {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid  rgb(92, 55, 214); /* Blue */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
