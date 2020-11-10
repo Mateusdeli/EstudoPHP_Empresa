@@ -9,6 +9,7 @@
                 <a href="?p=empresa">Empresa</a>
                 <a href="?p=servicos">Serviços</a>
                 <a href="?p=contato">Contato</a>
+                <a href="?p=admin">Admin</a>
             </nav>
         </div>
     </div>

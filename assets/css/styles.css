@@ -37,6 +37,10 @@
     text-decoration: none;
 }
 
+.separador{
+    margin-top: 25px;
+}
+
 /* Loading (Spinner) */
 
 .loader {

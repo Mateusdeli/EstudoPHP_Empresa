@@ -8,7 +8,6 @@ use PHPMailer\PHPMailer\Exception;
 
 class Email {
     
-    private $email_from = "mateus.deliberali1@yahoo.com.br";
     private $email;
     private $assunto;
     private $mensagem;
@@ -24,19 +23,19 @@ class Email {
     }
 
     public function sendEmail(){
-        
+
         try {
             //$this->mail->SMTPDebug = SMTP::DEBUG_SERVER;
             $this->mail->isSMTP();                                            // Send using SMTP
-            $this->mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+            $this->mail->Host       = $_ENV['SMTP_HOST'];                    // Set the SMTP server to send through
             $this->mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-            $this->mail->Username   = 'mateusteste123555@gmail.com';                     // SMTP username
-            $this->mail->Password   = 'skidrow123';                               // SMTP password
+            $this->mail->Username   = $_ENV['SMTP_USER'];;                     // SMTP username
+            $this->mail->Password   = $_ENV['SMTP_PASS'];;                               // SMTP password
             $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-            $this->mail->Port       = 587; 
+            $this->mail->Port       = $_ENV['SMTP_PORT'];; 
 
-            $this->mail->setFrom($this->email_from, "Mensagem do site");
-            $this->mail->addAddress($this->email_from);
+            $this->mail->setFrom($_ENV['EMAIL_DESTINATION'], "Mensagem do site");
+            $this->mail->addAddress($_ENV['EMAIL_DESTINATION']);
 
             // Content
             $this->mail->isHTML(true);                                  // Set email format to HTML
