@@ -2,14 +2,6 @@
 <?php if (isset($_SESSION['login']['logged'])): ?>
 
     <h3>Fala Admin</h3>
-    <div class="row text-right">
-        <div class="col-6">
-            <p><?= $_SESSION['login']['user'] ?></p>
-        </div>
-        <div class="col-6">
-            <button>Loggout</button>
-        </div>
-    </div>
 
 <?php else: ?>
 <div class="container">
